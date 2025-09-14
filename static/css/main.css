@@ -1,0 +1,12 @@
+body {
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+}
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black; /* Sets a 1px solid black border */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
