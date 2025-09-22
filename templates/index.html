@@ -8,19 +8,32 @@
     <h1 style="text-align: center">Personal Expense Tracker</h1>
     <table>
         <tr>
-            {% for column in inStatement.columns %}
-            <th>{{ column }}</th>
-            {% endfor %}
+            <th>id</th>
+            <th>Paid</th>
+            <th>Transaction Date</th>
+            <th>Posted Date</th>
+            <th>Card No.</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Debit</th>
+            <th>Credit</th>
         </tr>
 
-        {% for i in inStatement.rows %}
+        {% for trans in inStatement %}
         <tr>
-            {% for column in inStatement.columns %}
-            <td>{{ inStatement.content.loc[i, column] }}</td>
-            {% endfor %}
+            <td>{{ trans.id }}</td>
+            <td>{{ trans.paid }}</td>
+            <td>{{ trans.trans_date }}</td>
+            <td>{{ trans.posted_date }}</td>
+            <td>{{ trans.card_num }}</td>
+            <td>{{ trans.description }}</td>
+            <td>{{ trans.category }}</td>
+            <td>{{ trans.debit }}</td>
+            <td>{{ trans.credit }}</td>
         </tr>
         {% endfor %}
     </table>
+    <button type="submit" formaction="/add">Add statement</button>
 
     <br>
     <form action="/" method="POST">
