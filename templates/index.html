@@ -33,12 +33,7 @@
         </tr>
         {% endfor %}
     </table>
-    <button type="submit" formaction="/add">Add statement</button>
-
     <br>
-    <form action="/" method="POST">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Test button">
-    </form>
+    <button type="submit" onclick="location.href = '/add';">Add statement</button>
 </div>
 {% endblock %}
